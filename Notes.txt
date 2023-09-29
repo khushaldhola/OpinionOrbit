@@ -16,3 +16,7 @@ we need to let know this project about this app so add into INSTALLED_APPS in se
     -> we can simpaly add 'base' but we liked to do direct path to the config file - 'base.apps.BaseConfig' , so now Django knows about our app
 
 in urls.py '' means base page like starting page
+
+after creating a seperate urls.py file for base app we have to connect it through the main urls.py to work it properly,
+    so instead of adding all files there we can use include if it match go to this file like, path('', include('base.urls'))
+    so it take care of all urls
