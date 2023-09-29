@@ -14,3 +14,5 @@ We can store our environment in different ways. I am keeping it in the opinionor
 python manage.py startapp base
 we need to let know this project about this app so add into INSTALLED_APPS in setting.py
     -> we can simpaly add 'base' but we liked to do direct path to the config file - 'base.apps.BaseConfig' , so now Django knows about our app
+
+in urls.py '' means base page like starting page
