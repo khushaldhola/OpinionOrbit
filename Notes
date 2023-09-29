@@ -1,0 +1,12 @@
+Step-by-step procedure.
+
+pip install virtualenv
+virtualenv env                 # now u can see env folder in PWD
+env\Scripts\activate           # to activate env(simply type env\Scripts\deactivate to deact it)
+
+pip install django
+django-admin startproject opinionorbit
+cd opinionorbit
+python manage.py runserver    # and that's our Django server started
+
+We can store our environment in different ways. I am keeping it in the opinionorbit folder.
