@@ -41,3 +41,8 @@ we created templates dir for all the templates inside our application, now for e
     template for individual app and we can have main & navbar as global so stays in base template but for others like
     room, home we can place them in our base app, and django follow some rulw for make that dir like -> inside app -> templates/_appName_
     and add base/ in views to run it properly
+
+Dynamic url routing - <str:pk> in urls.py ph is just var, and str is type, so now in views we have to 
+    pass pk as a args to access whatever inside that url parameter
+    what if somtimes we changed our path room to room_name so won't changing all over so we can use url tags 
+    - <a href="{% url 'room' room.id %}"> here room refers to name of the url in urls.py
