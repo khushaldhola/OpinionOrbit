@@ -25,3 +25,11 @@ now we creating a templates folder where we are going to store all the templates
     so, django doesn' know yet of templates dir, go to settings.py and we need to go in TEMPLATES -> 'DIRS' -> BASE_DIR / 'templates'
 
 now we can get rid of HttpResponse and add html file path to it by using render methods
+
+we are using template inheritance (for ex. we need navbar in every page and we don't want to write in every html)
+    {% include 'navbar.html' %} - templating system/context
+
+    {% block content %}
+    {% endblock %}          -> writing this in main so we can wrap around the other content,
+                               so what that do is instead of including navbar to every page we can add it to the main
+                               and we are gonna extend it {% extends 'main.html' %}
