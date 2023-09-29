@@ -26,6 +26,7 @@ now we creating a templates folder where we are going to store all the templates
 
 now we can get rid of HttpResponse and add html file path to it by using render methods
 
+https://docs.djangoproject.com/en/4.2/topics/templates/
 we are using template inheritance (for ex. we need navbar in every page and we don't want to write in every html)
     {% include 'navbar.html' %} - templating system/context
 
@@ -33,3 +34,10 @@ we are using template inheritance (for ex. we need navbar in every page and we d
     {% endblock %}          -> writing this in main so we can wrap around the other content,
                                so what that do is instead of including navbar to every page we can add it to the main
                                and we are gonna extend it {% extends 'main.html' %}
+
+we can pass dict from views in html so now we have access that list in the particular html 
+
+we created templates dir for all the templates inside our application, now for ex. we have bigger app than we need 
+    template for individual app and we can have main & navbar as global so stays in base template but for others like
+    room, home we can place them in our base app, and django follow some rulw for make that dir like -> inside app -> templates/_appName_
+    and add base/ in views to run it properly
